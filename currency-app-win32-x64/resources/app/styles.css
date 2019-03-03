@@ -1,0 +1,100 @@
+*{
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 0.01em;
+}
+
+input{
+    width: 100px;
+    height: 35px;
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+input:focus{
+    outline: #1f8dd6;
+}
+
+button{
+    width: 100px;
+    margin: 15px auto;
+    display: block;
+    background: #1f8dd6;
+    color: #fff;
+    border: 1px solid #1f8dd6;
+    font-size: 125%;
+    padding: .5em 1em;
+    border-radius: 2px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    align-items: center;
+}
+
+/*.col i{*/
+    /*font-size: 24px;*/
+    /*cursor: pointer;*/
+    /*color: #333;*/
+/*}*/
+
+#chart{
+    position: relative;
+}
+
+.chartist-tooltip{
+    /*background: #1f8dd6;*/
+    background: rgba(31,141,214,.6);
+    color: #fff;
+}
+.chartist-tooltip:before{
+    /*border-top-color: #1f8dd6;*/
+    border-top-color: rgba(31,141,214,.6);
+}
+
+.ct-series-a{
+    animation: draw 1s 1s ease both;
+}
+
+.ct-series-a .ct-line {
+    /* Set the colour of this series line */
+    stroke: #1f8dd6;
+    /* Control the thikness of your lines */
+    stroke-width: 3px;
+    /* Create a dashed line with a pattern */
+    /*stroke-dasharray: 10px 20px;*/
+}
+.ct-series-a .ct-point {
+    /* Colour of your points */
+    stroke: #1f8dd6;
+    /* Size of your points */
+    stroke-width: 10px;
+    /* Make your points appear as squares */
+    stroke-linecap: round;
+    cursor: pointer;
+}
+
+.ct-label.ct-horizontal{
+    -webkit-transform: rotate(45deg) translateY(20px);
+    -moz-transform: rotate(45deg) translateY(20px);
+    -ms-transform: rotate(45deg) translateY(20px);
+    -o-transform: rotate(45deg) translateY(20px);
+    transform: rotate(45deg) translateY(20px);
+}
+
+
+#result.error{
+    color: rgb(202, 60, 60);
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
